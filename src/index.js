@@ -27,19 +27,16 @@ const rwClient = require("./twitterClient.js");
 tweet();
  */
 
-
-if (core.getInput("consumer-key")) {console.log("no consumer key")}
-
-const run = async => {
-  try {
-    
-    await rwClient.v2.tweet("278917");
-
-
-
-  } catch (error) {
-    core.setFailed(error.message)
-  }
+if (core.getInput("consumer-key")) {
+  console.log("no consumer key");
 }
 
-run()
+const run = async () => {
+  try {
+    await rwClient.v2.tweet("278917");
+  } catch (error) {
+    core.setFailed(error.message);
+  }
+};
+
+run();
