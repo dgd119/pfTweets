@@ -9042,6 +9042,7 @@ var __webpack_exports__ = {};
 // This entry need to be wrapped in an IIFE because it need to be isolated against other modules in the chunk.
 (() => {
 const rwClient = __nccwpck_require__(3089);
+const core = __nccwpck_require__(2186);
 
 /* const tweet = async () => {
   var text = "psalms for this ";
