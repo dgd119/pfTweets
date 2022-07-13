@@ -9,14 +9,14 @@ const tweet = async () => {
     text =
       text +
       "evening: " +
-      getInput("pfString") +
+      core.getInput("pfString") +
       String(today.getDate()).padStart(2, "0") +
       "p/";
   } else {
     text =
       text +
       "morning: " +
-      getInput("pfString") +
+      core.getInput("pfString") +
       String(today.getDate()).padStart(2, "0") +
       "a/";
   }
