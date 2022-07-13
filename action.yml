@@ -2,8 +2,8 @@ name: "Send Tweet Action"
 description: "Post a tweet to Twitter during a GitHub Actions workflow."
 author: "David Evans"
 inputs:
-  status:
-    description: The status ("tweet") to post to twitter.
+  pfString:
+    description: url base string for twitter post.
   consumer-key:
     description: >
       Consumer API key, available in the "Keys and tokens"
