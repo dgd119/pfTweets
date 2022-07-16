@@ -2,7 +2,7 @@ const rwClient = require("./twitterClient.js");
 const core = require("@actions/core");
 
 const tweet = async () => {
-  var text = "psalms for this ";
+  var text = "psalms for ";
   today = new Date();
   hour = today.getHours();
   if (hour > 11) {

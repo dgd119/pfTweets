@@ -9045,7 +9045,7 @@ const rwClient = __nccwpck_require__(3089);
 const core = __nccwpck_require__(2186);
 
 const tweet = async () => {
-  var text = "psalms for this ";
+  var text = "psalms for ";
   today = new Date();
   hour = today.getHours();
   if (hour > 11) {
