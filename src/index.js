@@ -12,7 +12,7 @@ const tweet = async () => {
       core.getInput("pfString") +
       String(today.getDate()).padStart(2, "0") +
       "p/";
-  } else if (hour > 8) {
+  } else if (hour > 5) {
     text =
       text +
       "this morning: " +
