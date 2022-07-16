@@ -9051,17 +9051,19 @@ const tweet = async () => {
   if (hour > 11) {
     text =
       text +
-      "evening: " +
+      "this evening: " +
       core.getInput("pfString") +
       String(today.getDate()).padStart(2, "0") +
       "p/";
-  } else {
+  } else if (hour > 8) {
     text =
       text +
-      "morning: " +
+      "this morning: " +
       core.getInput("pfString") +
       String(today.getDate()).padStart(2, "0") +
       "a/";
+  } else {
+    text = text + "today";
   }
 
   try {
