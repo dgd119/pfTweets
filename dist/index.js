@@ -9063,7 +9063,8 @@ const tweet = async () => {
       String(today.getDate()).padStart(2, "0") +
       "a/";
   } else {
-    text = text + "today";
+    text = text + "today" + core.getInput("pfString");
+    text = text.slice(0, 13);
   }
 
   try {
