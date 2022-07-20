@@ -9064,7 +9064,7 @@ const tweet = async () => {
       "a/";
   } else {
     text = text + "today: " + core.getInput("pfString");
-    text = text.slice(0, 40);
+    text = text.slice(0, 48);
   }
 
   try {
