@@ -6,20 +6,23 @@ const tweet = async () => {
   today = new Date();
   hour = today.getHours();
   if (hour > 11) {
-    text =
-      text +
-      "this evening: " +
-      core.getInput("pfString") +
-      String(today.getDate()).padStart(2, "0") +
-      "p/";
+    // it's the evening cron job - show evening
+    text = text + "this evening: " + core.getInput("pfString");
+    if (today.getDate().padStart(2, "0") < 30) {
+      text = text + String(today.getDate()).padStart(2, "0") + "p/";
+    } else {
+      text = text + "30p31p/";
+    }
   } else if (hour > 5) {
-    text =
-      text +
-      "this morning: " +
-      core.getInput("pfString") +
-      String(today.getDate()).padStart(2, "0") +
-      "a/";
+    // it's the morning cron job - show morning
+    text = text + "this morning: " + core.getInput("pfString");
+    if (today.getDate().padStart(2, "0") < 30) {
+      text = text + String(today.getDate()).padStart(2, "0") + "a/";
+    } else {
+      text = text + "30a31a/";
+    }
   } else {
+    // it's the early morning cron job - show day
     text = text + "today: " + core.getInput("pfString");
     text = text.slice(0, 48);
   }
