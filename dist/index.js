@@ -9051,7 +9051,7 @@ const tweet = async () => {
   if (hour > 11) {
     // it's the evening cron job - show evening
     text = text + "this evening: " + core.getInput("pfString");
-    if (today.getDate().padStart(2, "0") < 30) {
+    if (String(today.getDate()).padStart(2, "0") < 30) {
       text = text + String(today.getDate()).padStart(2, "0") + "p/";
     } else {
       text = text + "30p31p/";
@@ -9059,7 +9059,7 @@ const tweet = async () => {
   } else if (hour > 5) {
     // it's the morning cron job - show morning
     text = text + "this morning: " + core.getInput("pfString");
-    if (today.getDate().padStart(2, "0") < 30) {
+    if (String(today.getDate()).padStart(2, "0") < 30) {
       text = text + String(today.getDate()).padStart(2, "0") + "a/";
     } else {
       text = text + "30a31a/";
