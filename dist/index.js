@@ -9065,7 +9065,7 @@ const tweet = async () => {
       text = text + "30a31a/";
     }
   } else {
-    // it's the early morning cron job - show day
+    // early morning cron job - show day
     text = text + "today: " + core.getInput("pfString");
     text = text.slice(0, 48);
   }
